@@ -6,7 +6,7 @@ $income=$wpdb->prefix."income";
 $income_category = $wpdb->prefix . "income_category";
 $income_cat_data = $wpdb->get_results("select * from $income_category");
 $income_join_result = $wpdb->get_results("SELECT wp_income.*,wp_income_category.name as category,wp_months.name as month FROM wp_income JOIN wp_income_category ON wp_income_category.id=wp_income.category_id JOIN wp_months ON wp_months.id=wp_income.month_id");
-// echo "<pre>";
+
 // print_r($expense_join_result);
 
 if (isset($_POST['submit'])) {
